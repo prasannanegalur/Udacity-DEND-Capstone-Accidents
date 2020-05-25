@@ -37,6 +37,10 @@ The scope of the project is to create a data pipeline which accepts the source f
 
 ## Data Model
 The data model consists of 8 dimension and 2 fact tables. The Data Model is as below:
+![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/Data_dictionary.pdf)
+
+## Data Dictionary
+Here is the Data Dictionary for the tables
 ![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Data_Model.jpg)
 
 ## Design of Data Pipeline
