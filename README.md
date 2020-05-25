@@ -6,10 +6,19 @@ The objective of this project is to create a data model and ETL flow to be able 
 
 # Datasource Details:
 The data is gathered from Kaggle and below are the details.
-* US Accidents from Feb 2016 to Dec 2019.[kaggle](https://www.kaggle.com/sobhanmoosavi/us-accidents)
-* Washington DC taxi cab trips for 2017. [kaggle](https://www.kaggle.com/bvc5283/dc-taxi-trips)
+* US Accidents from Feb 2016 to Dec 2019. [US_Accidents_Dec19.csv](https://www.kaggle.com/sobhanmoosavi/us-accidents)
+* Washington DC taxi cab trips for 2017. [taxi_final.csv](https://www.kaggle.com/bvc5283/dc-taxi-trips)
 
 ## Supporting Datasets:
 List of US airport codes is are got through 2 websites as below-
 * List of US State Codes [US State Codes](https://developers.google.com/public-data/docs/canonical/states_csv)
 * List of airport codes for each US State [Airport Codes](https://www.airnav.com/airports/us/)
+
+Below are snapshots of above datasets-
+
+Accidents
+
+Trips
+
+Airport Codes
+
