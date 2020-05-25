@@ -35,3 +35,31 @@ The scope of the project is to create a data pipeline which accepts the source f
 ## Data Model
 The data model consists of 8 dimension and 2 fact tables. The Data Model is as below:
 ![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Data_Model.jpg)
+
+## Design of Data Pipelines
+The data pipeline is created in Apache Airflow. Below are the various stages - 
+* Generate airport codes file
+* Create tables in the local postgres database (src, stg and core tables)
+* Load the src tables using the source datasets (.csv files)
+* Insert data into stg tables using the data from src tables
+* Insert data into lkp/dim tables
+* Insert data into fact tables
+* Include data quality checks (row counts and duplicate rows validations)
+
+Below is the snapshot of the pipeline -
+![Airflow-DAG](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/ETL_Pipeline.jpg)
+
+
+## Handling Special Scenarios
+
+### If the data was increased by 100x.
+
+As the size increases, handling data from local csv files may not be feasible. In that case, moving the files to Amazon S3 and loading them using Spark would be a better option.
+
+### If the pipelines would be run on a daily basis by 7 am every day.
+
+This can be handled using the existing Airflow DAG using the scheduling feature of Airflow.
+
+### If the database needed to be accessed by 100+ people.
+
+Local postgresql database may not be able to handle the load of 100+ people. In that case instead of using local postgresql, using Amazon redshift would be able to handle this as redshift has clustering abilities and is highly scalable.
