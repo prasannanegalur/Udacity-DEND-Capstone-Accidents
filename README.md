@@ -2,9 +2,9 @@
 Code for final capstone project for Udacity Data Engineering Nano Degree
 
 ## Objective:
-The objective of this project is to create a data model and ETL flow to be able to provide analytical capability for analysing traffic accidents. The outcome of the analysis will provide insights to what conditions may cause maximum accidents and what steps can be taken to minimize such incidents. The data spans across multiple years and has close to 3 million rows.
+The objective of this project is to create a data model and ETL flow which will be able to provide analytical capability using traffic accidents data. The outcome of the analysis will provide insights to what conditions may cause maximum accidents and what steps can be taken to minimize such incidents and make the roads much safer. The data spans across multiple years and has close to 3 million rows.
 
-## Datasource Details:
+## Dataset Details:
 The data is gathered from Kaggle and below are the details.
 * US Accidents from Feb 2016 to Dec 2019. [US_Accidents_Dec19.csv](https://www.kaggle.com/sobhanmoosavi/us-accidents)
 * Washington DC taxi cab trips for 2017. [taxi_final.csv](https://www.kaggle.com/bvc5283/dc-taxi-trips)
@@ -25,7 +25,7 @@ Airport Codes
 ![Airports](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Airports.jpg)
 
 ## Project Scope:
-The scope of the project is to create a data pipeline which accepts the source files, process and clean them, transform as per the the data model and load them in dimension and fact tables. The source files will be read from local machine, use apache airflow and python to create a data pipeline and eventually load the processed and transformed data into the data model created in local postgresql database.
+The scope of the project is to create a data pipeline which accepts the source files, processes, cleans and transforms them as per the the data model and loads them in dimension and fact tables. The source files will be read from local machine, using apache airflow and python to create a data pipeline and eventually load the data into the tables created in local postgresql database.
 
 ## Technologies used:
 - Apache Airflow
@@ -36,30 +36,31 @@ The scope of the project is to create a data pipeline which accepts the source f
 The data model consists of 8 dimension and 2 fact tables. The Data Model is as below:
 ![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Data_Model.jpg)
 
-## Design of Data Pipelines
-The data pipeline is created in Apache Airflow. Below are the various stages - 
+## Design of Data Pipeline
+The data pipeline is created in Apache Airflow. Below are the various steps. 
 * Generate airport codes file
 * Create tables in the local postgres database (src, stg and core tables)
 * Load the src tables using the source datasets (.csv files)
 * Insert data into stg tables using the data from src tables
 * Insert data into lkp/dim tables
 * Insert data into fact tables
-* Include data quality checks (row counts and duplicate rows validations)
+* Create necessary index on the tables to improve query performance
+* Include data quality checks at appropriate stages (row counts and duplicate rows validation)
 
 Below is the snapshot of the pipeline -
 ![Airflow-DAG](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/ETL_Pipeline.jpg)
 
 
-## Handling Special Scenarios
+## Handling of Special Scenarios
 
 ### If the data was increased by 100x.
 
-As the size increases, handling data from local csv files may not be feasible. In that case, moving the files to Amazon S3 and loading them using Spark would be a better option.
+Loading of data from local csv files may not be feasible. In that case, moving the source files to Amazon S3 and loading them using Spark would be a better option.
 
-### If the pipelines would be run on a daily basis by 7 am every day.
+### If the pipelines were run on a daily basis by 7AM.
 
-This can be handled using the existing Airflow DAG using the scheduling feature of Airflow.
+This can be handled using the existing Airflow DAG using the scheduling features of the Airflow.
 
 ### If the database needed to be accessed by 100+ people.
 
-Local postgresql database may not be able to handle the load of 100+ people. In that case instead of using local postgresql, using Amazon redshift would be able to handle this as redshift has clustering abilities and is highly scalable.
+Local postgresql database may not be able to handle the load of 100+ concurrent users. In that case, using Amazon Redshift would resolve this scenario as Redshift has clustering abilities and is highly scalable.
