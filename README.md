@@ -16,16 +16,13 @@ List of US airport codes is are got through 2 websites as below-
 
 Below are snapshots of these datasets-
 Accidents
-
 ![Accidents](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Accidents.jpg)
 
 Trips
-
-![Trips](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Trips.jpg)
+![Trips](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Trips.jpg)
 
 Airport Codes
-
-![Airports](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Airports.jpg)
+![Airports](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Airports.jpg)
 
 ## Project Scope:
 The scope of the project is to create a data pipeline which accepts the source files, processes, cleans and transforms them as per the the data model and loads them in dimension and fact tables. The source files will be read from local machine, using apache airflow and python to create a data pipeline and eventually load the data into the tables created in local postgresql database.
@@ -37,11 +34,11 @@ The scope of the project is to create a data pipeline which accepts the source f
 
 ## Data Model
 The data model consists of 8 dimension and 2 fact tables. The Data Model is as below:
-![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Data_Model.jpg)
+![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Data_Model.jpg)
 
 ## Data Dictionary
 Here is the Data Dictionary for the tables
-![Data-Dictionary](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/Data_dictionary.pdf)
+![Data-Dictionary](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/Data_dictionary.pdf)
 
 
 ## Design of Data Pipeline
@@ -57,7 +54,7 @@ The data pipeline is created in Apache Airflow. Below are the various steps.
 
 Below is the snapshot of the pipeline -
 
-![Airflow-DAG](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/ETL_Pipeline.jpg)
+![Airflow-DAG](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/ETL_Pipeline.jpg)
 
 
 ## Handling of Special Scenarios
