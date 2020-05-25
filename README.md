@@ -22,6 +22,7 @@ Trips
 ![Trips](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Trips.jpg)
 
 Airport Codes
+
 ![Airports](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Airports.jpg)
 
 ## Project Scope:
