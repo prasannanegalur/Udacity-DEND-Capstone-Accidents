@@ -15,10 +15,13 @@ List of US airport codes is are got through 2 websites as below-
 * List of airport codes for each US State [Airport Codes](https://www.airnav.com/airports/us/)
 
 Below are snapshots of these datasets-
+
 Accidents
+
 ![Accidents](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Accidents.jpg)
 
 Trips
+
 ![Trips](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Trips.jpg)
 
 Airport Codes
@@ -35,10 +38,12 @@ The scope of the project is to create a data pipeline which accepts the source f
 
 ## Data Model
 The data model consists of 8 dimension and 2 fact tables. The Data Model is as below:
+
 ![Data-Model](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Data_Model.jpg)
 
 ## Data Dictionary
 Here is the Data Dictionary for the tables
+
 ![Data-Dictionary](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/Data_dictionary.pdf)
 
 
