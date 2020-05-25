@@ -1,4 +1,4 @@
-## Udacity-DEND-Capstone-Accidents
+## Udacity DEND Capstone Project - Accidents & Trips
 Code for final capstone project for Udacity Data Engineering Nano Degree
 
 ## Objective:
@@ -16,12 +16,15 @@ List of US airport codes is are got through 2 websites as below-
 
 Below are snapshots of these datasets-
 Accidents
+
 ![Accidents](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Accidents.jpg)
 
 Trips
+
 ![Trips](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Trips.jpg)
 
 Airport Codes
+
 ![Airports](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Airports.jpg)
 
 ## Project Scope:
@@ -48,6 +51,7 @@ The data pipeline is created in Apache Airflow. Below are the various steps.
 * Include data quality checks at appropriate stages (row counts and duplicate rows validation)
 
 Below is the snapshot of the pipeline -
+
 ![Airflow-DAG](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/ETL_Pipeline.jpg)
 
 
