@@ -17,7 +17,7 @@ List of US airport codes is are got through 2 websites as below-
 Below are snapshots of these datasets-
 Accidents
 
-![Accidents](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/tree/master/images/Accidents.jpg)
+![Accidents](https://github.com/prasannanegalur/Udacity-DEND-Capstone-Accidents/blob/master/images/Accidents.jpg)
 
 Trips
 
